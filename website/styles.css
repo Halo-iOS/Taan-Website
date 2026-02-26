@@ -1,0 +1,131 @@
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --accent-color: #3498db;
+    --text-secondary: #888888;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.app-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    margin: 0 auto;
+    object-fit: contain;
+    animation: rotate 60s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin: 8px 0 24px;
+    font-weight: 400;
+}
+
+.content {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    max-width: 480px;
+}
+
+.app-store-button {
+    display: inline-block;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: opacity 0.2s ease;
+}
+
+.app-store-button:hover {
+    opacity: 0.9;
+}
+
+footer {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 0.9rem;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.links a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.copyright {
+    color: #444;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #ffffff;
+        --text-color: #000000;
+        --text-secondary: #666666;
+    }
+    
+    .content {
+        color: #333;
+    }
+    
+    .copyright {
+        color: #999;
+    }
+}
